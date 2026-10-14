@@ -1,0 +1,1176 @@
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuestra Boda | Sofía & Alejandro</title>
+
+    
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    
+
+    <!-- FontAwesome Icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+
+        /* ==========================================
+
+           VARIABLES Y ESTILOS GLOBALES
+
+           ========================================== */
+
+        :root {
+
+            --primary: #8A9A86;        /* Verde Eucalipto Subducción */
+
+            --primary-dark: #687765;
+
+            --secondary: #D9C5B2;      /* Arena / Beige */
+
+            --accent: #B89B72;         /* Dorado Cobre */
+
+            --bg-light: #FAFA98;       /* Blanco Cálido */
+
+            --bg-card: #FFFFFF;
+
+            --text-main: #2C3531;
+
+            --text-muted: #666666;
+
+            --border-color: #E2E8F0;
+
+            --font-serif: 'Cormorant Garamond', serif;
+
+            --font-sans: 'Montserrat', sans-serif;
+
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
+            --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+
+            --radius: 16px;
+
+        }
+
+        * {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        body {
+
+            font-family: var(--font-sans);
+
+            background-color: var(--bg-light);
+
+            color: var(--text-main);
+
+            line-height: 1.6;
+
+            overflow-x: hidden;
+
+        }
+
+        .container {
+
+            max-width: 600px;
+
+            margin: 0 auto;
+
+            padding: 0 20px 80px 20px;
+
+        }
+
+        /* ==========================================
+
+           SECCIONES Y TARJETAS
+
+           ========================================== */
+
+        .card {
+
+            background: var(--bg-card);
+
+            border-radius: var(--radius);
+
+            padding: 32px 24px;
+
+            margin-bottom: 24px;
+
+            box-shadow: var(--shadow-sm);
+
+            text-align: center;
+
+            border: 1px solid rgba(0,0,0,0.03);
+
+        }
+
+        .section-title {
+
+            font-family: var(--font-serif);
+
+            font-size: 2.2rem;
+
+            color: var(--primary-dark);
+
+            margin-bottom: 8px;
+
+            font-weight: 600;
+
+        }
+
+        .section-subtitle {
+
+            font-size: 0.85rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            color: var(--accent);
+
+            margin-bottom: 20px;
+
+            font-weight: 500;
+
+        }
+
+        .divider {
+
+            width: 50px;
+
+            height: 1px;
+
+            background-color: var(--accent);
+
+            margin: 20px auto;
+
+        }
+
+        /* ==========================================
+
+           1. ENCABEZADO / HERO
+
+           ========================================== */
+
+        .hero {
+
+            padding: 60px 20px 40px 20px;
+
+            text-align: center;
+
+            background: linear-gradient(180deg, #F4F1EA 0%, var(--bg-light) 100%);
+
+            border-radius: 0 0 30px 30px;
+
+            margin-bottom: 30px;
+
+        }
+
+        .welcome-badge {
+
+            font-size: 0.8rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            color: var(--text-muted);
+
+            margin-bottom: 12px;
+
+            display: block;
+
+        }
+
+        .couples-names {
+
+            font-family: var(--font-serif);
+
+            font-size: 3.2rem;
+
+            line-height: 1.1;
+
+            color: var(--text-main);
+
+            margin-bottom: 16px;
+
+            font-weight: 400;
+
+        }
+
+        .couples-names span {
+
+            display: block;
+
+            font-size: 2rem;
+
+            color: var(--accent);
+
+            font-style: italic;
+
+            margin: 4px 0;
+
+        }
+
+        .wedding-date-text {
+
+            font-size: 1rem;
+
+            letter-spacing: 1.5px;
+
+            color: var(--primary-dark);
+
+            font-weight: 500;
+
+            text-transform: uppercase;
+
+        }
+
+        /* ==========================================
+
+           2. CONTADOR REGRESIVO
+
+           ========================================== */
+
+        .countdown-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+        .time-box {
+
+            background-color: var(--bg-light);
+
+            padding: 12px 5px;
+
+            border-radius: 12px;
+
+            border: 1px solid var(--border-color);
+
+        }
+
+        .time-value {
+
+            font-family: var(--font-serif);
+
+            font-size: 2rem;
+
+            font-weight: 600;
+
+            color: var(--primary-dark);
+
+            display: block;
+
+            line-height: 1;
+
+        }
+
+        .time-label {
+
+            font-size: 0.65rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            color: var(--text-muted);
+
+            margin-top: 6px;
+
+            display: block;
+
+        }
+
+        /* ==========================================
+
+           BOTONES GENERALES & CALENDARIO
+
+           ========================================== */
+
+        .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 12px 20px;
+
+            border-radius: 30px;
+
+            font-size: 0.85rem;
+
+            font-weight: 500;
+
+            text-decoration: none;
+
+            transition: all 0.3s ease;
+
+            cursor: pointer;
+
+            border: none;
+
+            width: 100%;
+
+            margin-top: 8px;
+
+        }
+
+        .btn-primary {
+
+            background-color: var(--primary);
+
+            color: #ffffff;
+
+        }
+
+        .btn-primary:hover {
+
+            background-color: var(--primary-dark);
+
+        }
+
+        .btn-outline {
+
+            background-color: transparent;
+
+            color: var(--text-main);
+
+            border: 1px solid var(--border-color);
+
+        }
+
+        .btn-outline:hover {
+
+            background-color: var(--bg-light);
+
+            border-color: var(--accent);
+
+        }
+
+        .btn-waze {
+
+            background-color: #33CCFF;
+
+            color: #FFFFFF;
+
+        }
+
+        .btn-maps {
+
+            background-color: #4285F4;
+
+            color: #FFFFFF;
+
+        }
+
+        .map-buttons {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 12px;
+
+        }
+
+        .map-buttons .btn {
+
+            margin-top: 0;
+
+            font-size: 0.78rem;
+
+        }
+
+        /* ==========================================
+
+           3. UBICACIONES (CEREMONIA Y RECEPCIÓN)
+
+           ========================================== */
+
+        .location-item {
+
+            padding: 16px 0;
+
+        }
+
+        .location-item:not(:last-child) {
+
+            border-bottom: 1px dashed var(--border-color);
+
+        }
+
+        .location-icon {
+
+            font-size: 1.5rem;
+
+            color: var(--accent);
+
+            margin-bottom: 8px;
+
+        }
+
+        .location-title {
+
+            font-family: var(--font-serif);
+
+            font-size: 1.6rem;
+
+            color: var(--text-main);
+
+            margin-bottom: 4px;
+
+        }
+
+        .location-time {
+
+            font-size: 0.85rem;
+
+            font-weight: 600;
+
+            color: var(--primary-dark);
+
+            margin-bottom: 6px;
+
+        }
+
+        .location-address {
+
+            font-size: 0.85rem;
+
+            color: var(--text-muted);
+
+            margin-bottom: 12px;
+
+        }
+
+        /* ==========================================
+
+           5. FORMULARIO RSVP
+
+           ========================================== */
+
+        .form-group {
+
+            text-align: left;
+
+            margin-bottom: 16px;
+
+        }
+
+        .form-label {
+
+            display: block;
+
+            font-size: 0.8rem;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            color: var(--text-main);
+
+            margin-bottom: 6px;
+
+        }
+
+        .form-control {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            font-family: var(--font-sans);
+
+            font-size: 0.9rem;
+
+            background-color: #FAFAFA;
+
+            transition: border-color 0.3s;
+
+        }
+
+        .form-control:focus {
+
+            outline: none;
+
+            border-color: var(--primary);
+
+            background-color: #FFFFFF;
+
+        }
+
+        textarea.form-control {
+
+            resize: vertical;
+
+            min-height: 80px;
+
+        }
+
+        .radio-group {
+
+            display: flex;
+
+            gap: 12px;
+
+        }
+
+        .radio-option {
+
+            flex: 1;
+
+        }
+
+        .radio-option input {
+
+            display: none;
+
+        }
+
+        .radio-option label {
+
+            display: block;
+
+            padding: 10px;
+
+            text-align: center;
+
+            border: 1px solid var(--border-color);
+
+            border-radius: 8px;
+
+            font-size: 0.85rem;
+
+            cursor: pointer;
+
+            transition: all 0.2s;
+
+        }
+
+        .radio-option input:checked + label {
+
+            background-color: var(--primary);
+
+            color: white;
+
+            border-color: var(--primary);
+
+        }
+
+        /* ==========================================
+
+           6. CÓDIGO DE VESTIMENTA
+
+           ========================================== */
+
+        .palette-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-top: 16px;
+
+        }
+
+        .color-circle {
+
+            width: 36px;
+
+            height: 36px;
+
+            border-radius: 50%;
+
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+
+        }
+
+        /* ==========================================
+
+           7. MESA DE REGALOS / LLUVIA DE SOBRES
+
+           ========================================== */
+
+        .bank-details {
+
+            background-color: var(--bg-light);
+
+            border-radius: 12px;
+
+            padding: 16px;
+
+            text-align: left;
+
+            font-size: 0.85rem;
+
+            margin-top: 16px;
+
+            border: 1px solid var(--border-color);
+
+        }
+
+        .bank-details p {
+
+            margin-bottom: 6px;
+
+        }
+
+        .qr-placeholder {
+
+            width: 130px;
+
+            height: 130px;
+
+            background-color: #E2E8F0;
+
+            margin: 16px auto 0 auto;
+
+            border-radius: 8px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: var(--text-muted);
+
+            font-size: 0.75rem;
+
+        }
+
+        /* ==========================================
+
+           8. BOTÓN FLOTANTE DE WHATSAPP
+
+           ========================================== */
+
+        .whatsapp-float {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            right: 20px;
+
+            background-color: #25D366;
+
+            color: white;
+
+            width: 54px;
+
+            height: 54px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 28px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+            z-index: 1000;
+
+            text-decoration: none;
+
+            transition: transform 0.3s;
+
+        }
+
+        .whatsapp-float:hover {
+
+            transform: scale(1.1);
+
+        }
+
+        /* Confirmación Toast */
+
+        .toast {
+
+            display: none;
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            background-color: var(--primary-dark);
+
+            color: white;
+
+            padding: 12px 24px;
+
+            border-radius: 30px;
+
+            font-size: 0.85rem;
+
+            box-shadow: var(--shadow-lg);
+
+            z-index: 1001;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Notificación Toast -->
+
+    <div id="toast" class="toast">¡Gracias! Tu respuesta ha sido enviada.</div>
+
+    <!-- 1. ENCABEZADO / HERO -->
+
+    <header class="hero">
+
+        <span class="welcome-badge">¡Nos casamos!</span>
+
+        <h1 class="couples-names">
+
+            Sofía
+
+            <span>&</span>
+
+            Alejandro
+
+        </h1>
+
+        <p class="wedding-date-text">Sábado, 18 de Octubre de 2025</p>
+
+    </header>
+
+    <div class="container">
+
+        <!-- 2. CONTADOR REGRESIVO & CALENDARIO -->
+
+        <section class="card">
+
+            <span class="section-subtitle">Tiempo Restante</span>
+
+            <div class="countdown-grid">
+
+                <div class="time-box">
+
+                    <span id="days" class="time-value">00</span>
+
+                    <span class="time-label">Días</span>
+
+                </div>
+
+                <div class="time-box">
+
+                    <span id="hours" class="time-value">00</span>
+
+                    <span class="time-label">Horas</span>
+
+                </div>
+
+                <div class="time-box">
+
+                    <span id="minutes" class="time-value">00</span>
+
+                    <span class="time-label">Min</span>
+
+                </div>
+
+                <div class="time-box">
+
+                    <span id="seconds" class="time-value">00</span>
+
+                    <span class="time-label">Seg</span>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="divider"></div>
+
+            <!-- 4. BOTÓN DInÁMICO GOOGLE CALENDAR -->
+
+            <a id="calendar-btn" href="#" target="_blank" class="btn btn-outline">
+
+                <i class="fa-regular fa-calendar-plus"></i> Agendar en Google Calendar
+
+            </a>
+
+        </section>
+
+        <!-- 3. UBICACIONES -->
+
+        <section class="card">
+
+            <h2 class="section-title">¿Dónde y Cuándo?</h2>
+
+            <span class="section-subtitle">Ubicaciones del Evento</span>
+
+            <!-- Ceremonia -->
+
+            <div class="location-item">
+
+                <i class="fa-solid fa-church location-icon"></i>
+
+                <h3 class="location-title">Ceremonia Religiosa</h3>
+
+                <p class="location-time">16:00 HRS</p>
+
+                <p class="location-address">Parroquia de Santa María del Mar<br>Av. Principal #123, Ciudad</p>
+
+                <div class="map-buttons">
+
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-maps"><i class="fa-solid fa-location-dot"></i> Google Maps</a>
+
+                    <a href="https://waze.com" target="_blank" class="btn btn-waze"><i class="fa-fab fa-waze"></i> Waze</a>
+
+                </div>
+
+            </div>
+
+            <!-- Recepción -->
+
+            <div class="location-item">
+
+                <i class="fa-solid fa-champagne-glasses location-icon"></i>
+
+                <h3 class="location-title">Recepción</h3>
+
+                <p class="location-time">18:30 HRS</p>
+
+                <p class="location-address">Hacienda San José<br>Km 5 Carretera Antigua, Ciudad</p>
+
+                <div class="map-buttons">
+
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-maps"><i class="fa-solid fa-location-dot"></i> Google Maps</a>
+
+                    <a href="https://waze.com" target="_blank" class="btn btn-waze"><i class="fa-fab fa-waze"></i> Waze</a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- 6. CÓDIGO DE VESTIMENTA -->
+
+        <section class="card">
+
+            <h2 class="section-title">Código de Vestimenta</h2>
+
+            <span class="section-subtitle">Rigurosa Etiqueta / Formal</span>
+
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+
+                Agradecemos mantener la elegancia del evento. Reservamos el color blanco exclusivamente para la novia.
+
+            </p>
+
+            
+
+            <p style="font-size: 0.8rem; margin-top: 16px; font-weight: 600; color: var(--primary-dark);">PALETA DE COLORES SUGERIDA:</p>
+
+            <div class="palette-container">
+
+                <div class="color-circle" style="background-color: #2C3E50;" title="Azul Marino"></div>
+
+                <div class="color-circle" style="background-color: #8A9A86;" title="Verde Eucalipto"></div>
+
+                <div class="color-circle" style="background-color: #D9C5B2;" title="Arena"></div>
+
+                <div class="color-circle" style="background-color: #B89B72;" title="Dorado Cobre"></div>
+
+            </div>
+
+        </section>
+
+        <!-- 5. FORMULARIO RSVP -->
+
+        <section class="card">
+
+            <h2 class="section-title">Confirmación de Asistencia</h2>
+
+            <span class="section-subtitle">RSVP</span>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">
+
+                Por favor confirma tu asistencia antes del 15 de Septiembre de 2025.
+
+            </p>
+
+            <form id="rsvp-form">
+
+                <div class="form-group">
+
+                    <label class="form-label" for="nombre">Nombre Completo</label>
+
+                    <input type="text" id="nombre" class="form-control" placeholder="Ej. Ana García" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label class="form-label">¿Asistirás?</label>
+
+                    <div class="radio-group">
+
+                        <div class="radio-option">
+
+                            <input type="radio" id="asistir-si" name="asistencia" value="Si" checked>
+
+                            <label for="asistir-si">¡Sí, ahí estaré!</label>
+
+                        </div>
+
+                        <div class="radio-option">
+
+                            <input type="radio" id="asistir-no" name="asistencia" value="No">
+
+                            <label for="asistir-no">No podré ir</label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label class="form-label" for="restricciones">Restricciones Alimenticias / Menú</label>
+
+                    <input type="text" id="restricciones" class="form-control" placeholder="Ej. Vegetariano, Vegano, Alergia a nueces">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label class="form-label" for="cancion">Recomendación de Canción</label>
+
+                    <input type="text" id="cancion" class="form-control" placeholder="¡La canción que no puede faltar en la fiesta!">
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Enviar Confirmación</button>
+
+            </form>
+
+        </section>
+
+        <!-- 7. LLUVIA DE SOBRES / MESA DE REGALOS -->
+
+        <section class="card">
+
+            <h2 class="section-title">Mesa de Regalos</h2>
+
+            <span class="section-subtitle">Lluvia de Sobres</span>
+
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+
+                Su presencia es nuestro mejor regalo. Si desean hacernos un obsequio adicional, les sugerimos la opción de lluvia de sobres o transferencia.
+
+            </p>
+
+            <div class="bank-details">
+
+                <p><strong>Banco:</strong> Banco Nacional</p>
+
+                <p><strong>Titular:</strong> Sofía & Alejandro</p>
+
+                <p><strong>Cuenta / CLABE:</strong> 012 345 6789 0123 4567</p>
+
+                <p><strong>Concepto:</strong> Boda + Tu Nombre</p>
+
+            </div>
+
+            <!-- Espacio para código QR opcional -->
+
+            <div class="qr-placeholder">
+
+                <i class="fa-solid fa-qrcode" style="font-size: 2rem; margin-right: 8px;"></i>
+
+                <span>Código QR Banco</span>
+
+            </div>
+
+        </section>
+
+        <footer style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 40px;">
+
+            <p>Con amor, Sofía & Alejandro ❤️</p>
+
+        </footer>
+
+    </div>
+
+    <!-- 8. BOTÓN FLOTANTE WHATSAPP -->
+
+    <a href="https://wa.me/?text=%C2%A1Hola!%20Te%20comparto%20la%20invitaci%C3%B3n%20para%20la%20boda%20de%20Sof%C3%ADa%20y%20Alejandro." class="whatsapp-float" target="_blank" title="Compartir por WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+    <!-- ==========================================
+
+       JAVASCRIPT
+
+       ========================================== -->
+
+    <script>
+
+        // Configuración de la fecha del evento (Año, Mes (0-indexado), Día, Hora, Minutos)
+
+        // 18 de Octubre de 2025, 16:00:00 HRS
+
+        const weddingDate = new Date(2025, 9, 18, 16, 0, 0).getTime();
+
+        // 1. Contador Regresivo
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+
+            const difference = weddingDate - now;
+
+            if (difference > 0) {
+
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = days < 10 ? '0' + days : days;
+
+                document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
+
+                document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+
+                document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+
+            } else {
+
+                document.getElementById('days').innerText = '00';
+
+                document.getElementById('hours').innerText = '00';
+
+                document.getElementById('minutes').innerText = '00';
+
+                document.getElementById('seconds').innerText = '00';
+
+            }
+
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        updateCountdown();
+
+        // 2. Generar Enlace Dinámico a Google Calendar
+
+        function generateGoogleCalendarLink() {
+
+            const title = encodeURIComponent("Boda de Sofía & Alejandro");
+
+            const details = encodeURIComponent("¡Acompáñanos a celebrar nuestra boda!");
+
+            const location = encodeURIComponent("Hacienda San José, Ciudad");
+
+            // Formato UTC: YYYYMMDDTHHMMSSZ
+
+            const startDate = "20251018T220000Z"; 
+
+            const endDate = "20251019T080000Z";
+
+            const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
+
+            
+
+            document.getElementById('calendar-btn').setAttribute('href', calendarUrl);
+
+        }
+
+        generateGoogleCalendarLink();
+
+        // 3. Manejo Interactividad Formulario RSVP
+
+        document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+
+            const asistencia = document.querySelector('input[name="asistencia"]:checked').value;
+
+            // Muestra mensaje de confirmación
+
+            const toast = document.getElementById('toast');
+
+            toast.innerText = `¡Gracias ${nombre}! Tu respuesta (${asistencia}) ha sido registrada.`;
+
+            toast.style.display = 'block';
+
+            setTimeout(() => {
+
+                toast.style.display = 'none';
+
+            }, 4000);
+
+            // Resetea el formulario
+
+            this.reset();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
